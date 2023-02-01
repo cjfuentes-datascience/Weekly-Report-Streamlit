@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df=pd.read_excel(r"C:\Users\pa173\Documents\Python\Weekly Report\new_report.xlsx")
+df=pd.read_excel(r"new_report.xlsx")
 df=df[['producer', 'change_quotes', 'change_nb_apps',
        'change_rw_apps', 'quotes', 'nb_apps', 'rw_apps', 'quotes.1',
        'nb_apps.1', 'rw_apps.1', 'quotes.2', 'nb_apps.2', 'rw_apps.2',
