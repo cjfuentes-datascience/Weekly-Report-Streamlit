@@ -24,7 +24,7 @@ st.subheader(f'Charts will change according to the slider value: {slider_val}')
 st.write('---')
 
 # avg of quotes, nb, rw apps side by side
-st.subheader('Average Statistics:')
+st.subheader('Average Stats:')
 col1, col2, col3 = st.columns(3)
 
 with col1:
