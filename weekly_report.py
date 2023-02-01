@@ -39,7 +39,7 @@ st.write('---')
 
 
 
-st.subheader('QUOTES:')
+st.subheader('Quotes by Producer:')
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 
@@ -62,7 +62,7 @@ ax2.bar_label(ax2.containers[0], rotation = 90, label_type='center')
 
 st.pyplot(fig)
 
-st.subheader('NB APPS:')
+st.subheader('NB Apps by Producer:')
 
 fig2, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 
@@ -86,7 +86,7 @@ ax2.bar_label(ax2.containers[0], rotation = 90, label_type='center')
 
 st.pyplot(fig2)
 
-st.subheader('RW APPS:')
+st.subheader('RW Apps by Producer:')
 
 fig3, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 sns.barplot(x='producer', y='rw_apps', data=df.head(slider_val), ax=ax1)
