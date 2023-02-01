@@ -15,19 +15,28 @@ st.title('Weekly Report: JAN 22 - JAN 28 2023')
 st.write('---')
 #st.table(df.head())
 
-num_bars=7
-
 # creating a slider
 st.subheader('To view the report: Select the number of producers using the slider below: :point_down:')
 slider_val=st.slider(label='', min_value=1, max_value=25, key=df['producer'])
 
 st.caption(f'Number of Producers: {slider_val}')
-
 st.subheader(f'Charts will change according to the slider value: {slider_val}')
-
-
-
 st.write('---')
+
+# avg of quotes, nb, rw apps side by side
+st.subheader('Average Statistics:')
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.metric(label='AVG Quotes', value=round(df['quotes'].head(slider_val).mean(), 2))
+    
+with col2:
+    st.metric(label='AVG NB Apps', value=round(df['nb_apps'].head(slider_val).mean(), 2))
+    
+with col3:
+    st.metric(label='AVG RW Apps', value=round(df['rw_apps'].head(slider_val).mean(), 2))
+
+
 
 st.subheader('QUOTES')
 
@@ -36,7 +45,7 @@ fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 sns.barplot(x='producer', y='quotes', data=df.head(slider_val), ax=ax1)
 ax1.set_xticklabels(ax1.get_xticklabels(), rotation=90)
 ax1.set_xlabel('PRODUCERS')
-ax1.set_ylabel('# Quotes')
+ax1.set_ylabel('Quotes')
 ax1.set_title('QUOTES:  JAN 22 - JAN 28')
 ax1.grid(axis='y')
 ax1.bar_label(ax1.containers[0], rotation = 90, label_type='center')
@@ -44,7 +53,7 @@ ax1.bar_label(ax1.containers[0], rotation = 90, label_type='center')
 sns.barplot(x='producer', y='quotes.1', data=df.head(slider_val), ax=ax2)
 ax2.set_xticklabels(ax2.get_xticklabels(), rotation=90)
 ax2.set_xlabel('PRODUCERS')
-ax2.set_ylabel('# Quotes')
+ax2.set_ylabel('Quotes')
 ax2.set_title('QUOTES:  JAN 15 - JAN 21')
 ax2.grid(axis='y')
 ax2.bar_label(ax2.containers[0], rotation = 90, label_type='center')
@@ -59,7 +68,7 @@ fig2, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 sns.barplot(x='producer', y='nb_apps', data=df.head(slider_val), ax=ax1)
 ax1.set_xticklabels(ax1.get_xticklabels(), rotation=90)
 ax1.set_xlabel('PRODUCERS')
-ax1.set_ylabel('# NB APPS')
+ax1.set_ylabel('NB APPS')
 ax1.set_title('NB APPS:  JAN 22 - JAN 28')
 ax1.grid(axis='y')
 ax1.bar_label(ax1.containers[0], rotation = 90, label_type='center')
@@ -68,7 +77,7 @@ ax1.bar_label(ax1.containers[0], rotation = 90, label_type='center')
 sns.barplot(x='producer', y='nb_apps.1', data=df.head(slider_val), ax=ax2)
 ax2.set_xticklabels(ax2.get_xticklabels(), rotation=90)
 ax2.set_xlabel('PRODUCERS')
-ax2.set_ylabel('# NB APPS')
+ax2.set_ylabel('NB APPS')
 ax2.set_title('NB APPS:  JAN 15 - JAN 21')
 ax2.grid(axis='y')
 ax2.bar_label(ax2.containers[0], rotation = 90, label_type='center')
@@ -82,7 +91,7 @@ fig3, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 sns.barplot(x='producer', y='rw_apps', data=df.head(slider_val), ax=ax1)
 ax1.set_xticklabels(ax1.get_xticklabels(), rotation=90)
 ax1.set_xlabel('PRODUCERS')
-ax1.set_ylabel('# RW APPS')
+ax1.set_ylabel('RW APPS')
 ax1.set_title('RW APPS:  JAN 22 - JAN 28')
 ax1.grid(axis='y')
 ax1.bar_label(ax1.containers[0], rotation = 90, label_type='center')
@@ -91,22 +100,10 @@ ax1.bar_label(ax1.containers[0], rotation = 90, label_type='center')
 sns.barplot(x='producer', y='rw_apps.1', data=df.head(slider_val), ax=ax2)
 ax2.set_xticklabels(ax2.get_xticklabels(), rotation=90)
 ax2.set_xlabel('PRODUCERS')
-ax2.set_ylabel('# RW APPS')
+ax2.set_ylabel('RW APPS')
 ax2.set_title('RW APPS:  JAN 15 - JAN 21')
 ax2.grid(axis='y')
 ax2.bar_label(ax2.containers[0], rotation = 90, label_type='center')
 
 
 st.pyplot(fig3)
-
-
-
-#st.write('---')
-
-#col1, col2=st.columns(2)
-
-#col1.caption('Last Weeks Quotes')
-#col1.bar_chart(data=df.head(slider_val), x='producer', y='quotes')
-    
-#col2.caption('New Business Apps')
-#col2.bar_chart(data=df.head(slider_val), x='producer', y='nb_apps')
