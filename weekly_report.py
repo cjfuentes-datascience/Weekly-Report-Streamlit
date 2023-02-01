@@ -16,7 +16,7 @@ st.write('---')
 #st.table(df.head())
 
 # creating a slider
-st.subheader('To view the report: Select the number of "_Top 25 Producers_" using the slider below: :point_down:')
+st.subheader('To view the report: Select the number of _"Top 25 Producers"_ using the slider below: :point_down:')
 slider_val=st.slider(label='', min_value=1, max_value=25, key=df['producer'])
 
 st.caption(f'Number of Producers: {slider_val}')
