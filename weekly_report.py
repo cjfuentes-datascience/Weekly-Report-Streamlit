@@ -11,12 +11,13 @@ df=df[['producer', 'change_quotes', 'change_nb_apps',
        'quotes.3', 'nb_apps.3', 'rw_apps.3']]
 
 st.title('Weekly Report: JAN 22 - JAN 28 2023')
+st.caption('_Based off top 25 producers_')
 #st.subheader('Dated: JAN 22 - JAN 28 2023')
 st.write('---')
 #st.table(df.head())
 
 # creating a slider
-st.subheader('To view the report: Select the number of _"Top 25 Producers"_ using the slider below: :point_down:')
+st.subheader('To view the report: Select the number of producers using the slider below: :point_down:')
 slider_val=st.slider(label='', min_value=1, max_value=25, key=df['producer'])
 
 st.caption(f'Number of Producers: {slider_val}')
