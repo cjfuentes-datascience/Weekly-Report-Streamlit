@@ -68,7 +68,7 @@ st.subheader('NB Apps by Producer:')
 
 fig2, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 
-sns.barplot(x='producer', y='nb_apps', data=df.head(slider_val), ax=ax1)
+sns.barplot(x='producer', y='nb_apps', data=df.head(slider_val), ax=ax1, palette='Greens')
 ax1.set_xticklabels(ax1.get_xticklabels(), rotation=90)
 ax1.set_xlabel('PRODUCERS')
 ax1.set_ylabel('# NB APPS')
@@ -91,7 +91,7 @@ st.pyplot(fig2)
 st.subheader('RW Apps by Producer:')
 
 fig3, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
-sns.barplot(x='producer', y='rw_apps', data=df.head(slider_val), ax=ax1)
+sns.barplot(x='producer', y='rw_apps', data=df.head(slider_val), ax=ax1, palette='Reds')
 ax1.set_xticklabels(ax1.get_xticklabels(), rotation=90)
 ax1.set_xlabel('PRODUCERS')
 ax1.set_ylabel('# RW APPS')
