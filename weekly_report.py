@@ -52,7 +52,7 @@ ax1.set_xticklabels(ax1.get_xticklabels(), rotation=90, color='white')
 ax1.set_xlabel('PRODUCERS', color='white')
 ax1.set_ylabel('# Quotes', color='white')
 ax1.set_title('CURRENT QUOTES:  JAN 22 - JAN 28', color='white')
-ax1.grid(axis='y')
+ax1.grid(axis='y', color='white')
 ax1.bar_label(ax1.containers[0], rotation = 90, label_type='center')
 
 sns.barplot(x='producer', y='quotes.1', data=df.head(slider_val), ax=ax2)
