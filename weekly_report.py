@@ -46,6 +46,7 @@ st.subheader('Quotes by Producer:')
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 
 sns.barplot(x='producer', y='quotes', data=df.head(slider_val), ax=ax1)
+ax1.set_facecolor("lightblue")
 ax1.set_xticklabels(ax1.get_xticklabels(), rotation=90)
 ax1.set_xlabel('PRODUCERS')
 ax1.set_ylabel('# Quotes')
