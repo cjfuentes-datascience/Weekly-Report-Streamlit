@@ -38,7 +38,7 @@ with col2:
     
 with col3:
     st.metric(label='AVG RW Apps', value=round(df['rw_apps'].head(slider_val).mean(), 2))
-#st.write('---')
+st.write('---')
 
 
 col4, col5, col6 = st.columns(3)
