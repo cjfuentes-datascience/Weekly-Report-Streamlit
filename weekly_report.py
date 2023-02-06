@@ -101,9 +101,9 @@ ax2.bar_label(ax2.containers[0], rotation = 90, label_type='center')
 
 st.pyplot(fig)
 
-slider_val=st.slider(label='', min_value=1, max_value=25, value=5, key=df['producer'])
-
 st.write('---')
+
+st.slider(label='', min_value=1, max_value=25, value=5, key=df['producer'])
 
 st.subheader('NB Apps by Producer:')
 
