@@ -13,13 +13,7 @@ st.caption('_Data From: Top 25 Producers_')
 #st.write('---')
 #st.table(df.head())
 
-# creating a slider
-st.subheader('To view the report: Select the number of producers using the slider below: :point_down:')
-slider_val=st.slider(label='', min_value=1, max_value=25, value=5, key=df['producer'])
 
-st.caption(f'Number of Producers: {slider_val}')
-st.subheader(f'Charts will change according to the slider value: {slider_val}')
-st.write('---')
 
 # avg of quotes, nb, rw apps side by side
 st.subheader('Weekly Stats:')
@@ -61,6 +55,14 @@ with col5:
 with col6:
     st.metric(label='Top 25: RW Apps %', value=f"{round(100.0*(df['updated_rw_apps'].head(25).sum()/df['updated_rw_apps'].sum()), 2)}%")
 
+    
+# creating a slider
+st.subheader('To view the report: Select the number of producers using the slider below: :point_down:')
+slider_val=st.slider(label='', min_value=1, max_value=25, value=5, key=df['producer'])
+
+st.caption(f'Number of Producers: {slider_val}')
+st.subheader(f'Charts will change according to the slider value: {slider_val}')
+st.write('---')
 
 #st.write('---')
 
@@ -102,8 +104,6 @@ ax2.bar_label(ax2.containers[0], rotation = 90, label_type='center')
 st.pyplot(fig)
 
 st.write('---')
-
-st.slider(label='', min_value=1, max_value=25, value=5, key=df['producer'])
 
 st.subheader('NB Apps by Producer:')
 
