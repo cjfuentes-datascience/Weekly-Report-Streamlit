@@ -61,7 +61,7 @@ st.subheader('Quotes by Producer:')
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 
-sns.barplot(x='quotes', y='producer', data=df.head(slider_val), ax=ax1)
+sns.barplot(x='producer', y='quotes', data=df.head(slider_val), ax=ax1)
 ax1.set_xticklabels(ax1.get_xticklabels(), rotation=90)
 ax1.set_xlabel('PRODUCERS')
 ax1.set_ylabel('# Quotes')
@@ -69,7 +69,7 @@ ax1.set_title('CURRENT QUOTES:  JAN 22 - JAN 28')
 ax1.grid(axis='y')
 ax1.bar_label(ax1.containers[0], rotation = 90, label_type='center')
 
-sns.barplot(x='quotes.1', y='producer', data=df.head(slider_val), ax=ax2)
+sns.barplot(x='producer', y='quotes.1', data=df.head(slider_val), ax=ax2)
 ax2.set_xticklabels(ax2.get_xticklabels(), rotation=90)
 ax2.set_xlabel('PRODUCERS')
 ax2.set_ylabel('# Quotes')
