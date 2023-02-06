@@ -66,10 +66,10 @@ with col4:
     st.metric(label=f'Quotes %: Top {slider_val}', value=f"{round(100.0*(df['quotes'].head(slider_val).sum()/df['quotes'].sum()).mean(), 2)}%")
     
 with col5:
-    st.metric(label=f'NB Apps %: Top {slider_val}', value=f"{round(100.0*(df['nb_apps'].head(slider_val).sum()/df['quotes'].sum()).mean(), 2)}%")
+    st.metric(label=f'NB Apps %: Top {slider_val}', value=f"{round(100.0*(df['nb_apps'].head(slider_val).sum()/df['nb_apps'].sum()).mean(), 2)}%")
     
 with col6:
-    st.metric(label=f'RW Apps % Top: {slider_val}', value=f"{round(100.0*(df['rw_apps'].head(slider_val).sum()/df['quotes'].sum()).mean(), 2)}%")
+    st.metric(label=f'RW Apps % Top: {slider_val}', value=f"{round(100.0*(df['rw_apps'].head(slider_val).sum()/df['rw_apps'].sum()).mean(), 2)}%")
 
 st.write('---')
 
