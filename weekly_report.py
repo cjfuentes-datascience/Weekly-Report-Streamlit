@@ -13,8 +13,6 @@ st.caption('_Data From: Top 25 Producers_')
 #st.write('---')
 #st.table(df.head())
 
-st.write('---')
-
 
 # avg of quotes, nb, rw apps side by side
 st.subheader('Weekly Stats:')
