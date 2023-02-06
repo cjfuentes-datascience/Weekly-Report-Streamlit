@@ -40,7 +40,7 @@ with col3:
     st.metric(label='AVG RW Apps', value=round(df['rw_apps'].head(slider_val).mean(), 2))
 st.write('---')
 
-st.subheader('Week over week percentage change:')
+st.caption('Week over week percentage change:')
 col4, col5, col6 = st.columns(3)
 
 with col4:
