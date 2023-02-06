@@ -63,7 +63,7 @@ col4, col5, col6 = st.columns(3)
 #    st.metric(label='AVG RW Apps % Change', value=f"{round(df['pct_change_rw_apps'].head(slider_val).mean(), 2)}%")
 
 with col4:
-    st.metric(label='Quotes %', value=f"{round(100.0*(df['quotes'].head(slider_val)/df['quotes'].sum()).mean(), 2)}%")
+    st.metric(label='Quotes %', value=f"{round((df['quotes'].head(slider_val).sum()/df['quotes'].sum()).mean(), 2)}%")
     
 with col5:
     st.metric(label='NB Apps %', value=f"{round(df['pct_change_nb_apps'].head(slider_val).mean(), 2)}%")
