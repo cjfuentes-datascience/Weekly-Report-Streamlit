@@ -55,6 +55,8 @@ with col6:
     st.metric(label='Top 25: RW Apps %', value=f"{round(100.0*(df['updated_rw_apps'].head(25).sum()/df['updated_rw_apps'].sum()), 2)}%")
 
     
+st.write('---')
+    
 # creating a slider
 st.subheader('To view the report: Select the number of producers using the slider below: :point_down:')
 slider_val=st.slider(label='', min_value=1, max_value=25, value=5, key=df['producer'])
