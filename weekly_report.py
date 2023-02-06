@@ -41,7 +41,7 @@ with col3:
 st.write('---')
 
 
-col4, col5, col6 = st.columns(3)
+col4, col5, col6, col7 = st.columns(4)
 
 with col4:
     st.metric(label='AVG Quotes % Change', value=f"{round(df['change_quotes'].head(slider_val).mean(), 2)}%")
@@ -51,6 +51,10 @@ with col5:
     
 with col6:
     st.metric(label='AVG RW Apps % Change', value=f"{round(df['change_rw_apps'].head(slider_val).mean(), 2)}%")
+
+with col7:
+    st.metric(label='AVG Quotes % Change', value=f"{round(df['pct_change_quotes'].head(slider_val).mean(), 2)}%")
+
 st.write('---')
 
 
