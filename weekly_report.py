@@ -36,49 +36,41 @@ col1, col2, col3 = st.columns(3)
 #    st.metric(label='AVG RW Apps', value=round(df['rw_apps'].head(slider_val).mean(), 2))
 
 with col1:
-    st.metric(label='All Quotes', value=round(df['quotes'].sum(), 2))
+    st.metric(label='All Quotes', value=round(df['updated_quotes'].sum(), 2))
     
 with col2:
-    st.metric(label='All NB Apps', value=round(df['nb_apps'].sum(), 2))
+    st.metric(label='All NB Apps', value=round(df['updated_nb_apps'].sum(), 2))
     
 with col3:
-    st.metric(label='All RW Apps', value=round(df['rw_apps'].sum(), 2))
+    st.metric(label='All RW Apps', value=round(df['updated_rw_apps'].sum(), 2))
 
 st.write('---')
 
 
 col4, col5, col6 = st.columns(3)
 
-#with col4:
-#    st.metric(label='AVG Quotes % Change', value=f"{round(df['pct_change_quotes'].head(slider_val).mean(), 2)}%")
-    
-#with col5:
-#    st.metric(label='AVG NB Apps % Change', value=f"{round(df['pct_change_nb_apps'].head(slider_val).mean(), 2)}%")
-    
-#with col6:
-#    st.metric(label='AVG RW Apps % Change', value=f"{round(df['pct_change_rw_apps'].head(slider_val).mean(), 2)}%")
-
 with col4:
-    st.metric(label='Quotes %', value=f"{round(100.0*(df['quotes'].sum()/df['quotes'].sum()), 2)}%")
+    st.metric(label='AVG Quotes % Change', value=f"{round(df['pct_change_quotes'].head(slider_val).mean(), 2)}%")
     
 with col5:
-    st.metric(label='NB Apps %', value=f"{round(100.0*(df['nb_apps'].sum()/df['nb_apps'].sum()), 2)}%")
-    
+    st.metric(label='AVG NB Apps % Change', value=f"{round(df['pct_change_nb_apps'].head(slider_val).mean(), 2)}%")
+   
 with col6:
-    st.metric(label='RW Apps %', value=f"{round(100.0*(df['rw_apps'].sum()/df['rw_apps'].sum()), 2)}%")
+    st.metric(label='AVG RW Apps % Change', value=f"{round(df['pct_change_rw_apps'].head(slider_val).mean(), 2)}%")
+
 
 st.write('---')
 
 col7, col8, col9 = st.columns(3)
 
 with col7:
-    st.metric(label=f'Total Quotes: Top {slider_val}', value=f"{df['quotes'].head(slider_val).sum()}")
+    st.metric(label=f'Total Quotes: Top {slider_val}', value=f"{df['updated_quotes'].head(slider_val).sum()}")
     
 with col8:
-    st.metric(label=f'Total NB Apps: Top {slider_val}', value=f"{df['nb_apps'].head(slider_val).sum()}")
+    st.metric(label=f'Total NB Apps: Top {slider_val}', value=f"{df['updated_nb_apps'].head(slider_val).sum()}")
     
 with col9:
-    st.metric(label=f'Total RW Apps: Top {slider_val}', value=f"{df['rw_apps'].head(slider_val).sum()}")
+    st.metric(label=f'Total RW Apps: Top {slider_val}', value=f"{df['updated_rw_apps'].head(slider_val).sum()}")
 
 st.write('---')
 
