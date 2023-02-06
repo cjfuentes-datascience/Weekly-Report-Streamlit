@@ -57,10 +57,10 @@ st.write('---')
 col7, col8, col9 = st.columns(3)
 
 with col7:
-    st.metric(label='Total Quotes', value=f"{round(df['quotes'].head(slider_val).sum(), 2)}")
+    st.metric(label='Total Quotes', value=f"{df['quotes'].head(slider_val).sum()}")
     
 with col8:
-    st.metric(label='Total NB Apps', value=f"{round(df['nb_apps'].head(slider_val).sum(), 2)}")
+    st.metric(label='Total NB Apps', value=f"{df['nb_apps'].head(slider_val).sum()}")
     
 with col9:
     st.metric(label='Total RW Apps', value=f"{df['rw_apps'].head(slider_val).sum()}")
