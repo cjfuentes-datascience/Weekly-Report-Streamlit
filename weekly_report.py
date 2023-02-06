@@ -13,6 +13,15 @@ st.caption('_Data From: Top 25 Producers_')
 #st.write('---')
 #st.table(df.head())
 
+# creating a slider
+st.subheader('To view the report: Select the number of producers using the slider below: :point_down:')
+slider_val=st.slider(label='', min_value=1, max_value=25, value=5, key=df['producer'])
+
+st.caption(f'Number of Producers: {slider_val}')
+st.subheader(f'Charts will change according to the slider value: {slider_val}')
+st.write('---')
+
+
 
 # avg of quotes, nb, rw apps side by side
 st.subheader('Weekly Stats:')
@@ -64,13 +73,6 @@ with col6:
     
 st.write('---')
     
-# creating a slider
-st.subheader('To view the report: Select the number of producers using the slider below: :point_down:')
-slider_val=st.slider(label='', min_value=1, max_value=25, value=5, key=df['producer'])
-
-st.caption(f'Number of Producers: {slider_val}')
-st.subheader(f'Charts will change according to the slider value: {slider_val}')
-st.write('---')
 
 #st.write('---')
 
