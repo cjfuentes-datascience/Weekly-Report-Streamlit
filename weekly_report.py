@@ -50,7 +50,7 @@ with col5:
     st.metric(label='NB Apps % Change', value=f"{round(df['pct_change_nb_apps'].head(slider_val), 2)}%")
     
 with col6:
-    st.metric(label='RW Apps % Change', value=f"{round(df['pct_change_rw_apps'].head(slider_val), 2)}%")
+    st.metric(label='RW Apps % Change', value=f"{df['pct_change_rw_apps'].head(slider_val)}%")
 st.write('---')
 
 
