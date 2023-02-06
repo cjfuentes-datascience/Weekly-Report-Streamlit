@@ -54,7 +54,18 @@ with col6:
 
 st.write('---')
 
+col7, col8, col9 = st.columns(3)
 
+with col7:
+    st.metric(label='AVG Quotes % Change', value=f"{round(df['quotes'].head(slider_val).sum(), 2)}%")
+    
+with col8:
+    st.metric(label='AVG NB Apps % Change', value=f"{round(df['nb_apps'].head(slider_val).sum(), 2)}%")
+    
+with col9:
+    st.metric(label='AVG RW Apps % Change', value=f"{df['rw_apps'].head(slider_val).sum()}%")
+
+st.write('---')
 
 
 st.subheader('Quotes by Producer:')
