@@ -62,18 +62,18 @@ with col6:
     st.metric(label='AVG RW Apps % Change', value=f"{round(100.0*(df['updated_rw_apps'].head(25).sum()/df['updated_rw_apps'].sum()), 2)}%")
 
 
-st.write('---')
+#st.write('---')
 
-col7, col8, col9 = st.columns(3)
+#col7, col8, col9 = st.columns(3)
 
-with col7:
-    st.metric(label=f'Total Quotes: Top {slider_val}', value=f"{df['updated_quotes'].head(slider_val).sum()}")
+#with col7:
+#    st.metric(label=f'Total Quotes: Top {slider_val}', value=f"{df['updated_quotes'].head(slider_val).sum()}")
     
-with col8:
-    st.metric(label=f'Total NB Apps: Top {slider_val}', value=f"{df['updated_nb_apps'].head(slider_val).sum()}")
+#with col8:
+#    st.metric(label=f'Total NB Apps: Top {slider_val}', value=f"{df['updated_nb_apps'].head(slider_val).sum()}")
     
-with col9:
-    st.metric(label=f'Total RW Apps: Top {slider_val}', value=f"{df['updated_rw_apps'].head(slider_val).sum()}")
+#with col9:
+#    st.metric(label=f'Total RW Apps: Top {slider_val}', value=f"{df['updated_rw_apps'].head(slider_val).sum()}")
 
 st.write('---')
 
