@@ -5,11 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 df=pd.read_excel(r"new_report_jan29-feb4_2023.xlsx")
-df=df[['producer', 'pct_change_quotes', 'pct_change_nb_apps', 'pct_change_rw_apps',
-       'change_quotes', 'change_nb_apps', 'change_rw_apps',
-       'quotes', 'nb_apps', 'rw_apps', 'quotes.1', 'nb_apps.1', 'rw_apps.1',
-       'quotes.2', 'nb_apps.2', 'rw_apps.2', 'quotes.3', 'nb_apps.3',
-       'rw_apps.3']]
+
 
 st.title('Weekly Report: JAN 22 - JAN 28 2023')
 st.caption('_Data From: Top 25 Producers_')
