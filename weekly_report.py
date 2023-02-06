@@ -27,7 +27,7 @@ st.write('---')
 
 # avg of quotes, nb, rw apps side by side
 st.subheader('Average Stats:')
-st.caption(f'WoW change based off slider value: {slider_val}')
+st.caption(f'Based off slider value: {slider_val}')
 col1, col2, col3 = st.columns(3)
 
 with col1:
