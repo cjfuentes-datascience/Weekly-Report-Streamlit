@@ -44,6 +44,12 @@ col4, col5, col6 = st.columns(3)
 
 with col4:
     st.metric(label='AVG Quotes % Change', value=f"{round(df['pct_change_quotes'].head(slider_val).mean(), 2)}%")
+    
+with col5:
+    st.metric(label='AVG NB Apps % Change', value=f"{round(df['pct_change_nb_apps'].head(slider_val).mean(), 2)}%")
+    
+with col6:
+    st.metric(label='AVG NB Apps % Change', value=f"{round(df['pct_change_rw_apps'].head(slider_val).mean(), 2)}%")
 
 # code below matches the one on the actual report
 #with col4:
