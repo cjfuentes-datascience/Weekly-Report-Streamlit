@@ -13,36 +13,36 @@ st.caption('_Data From: Top 25 Producers_')
 #st.write('---')
 #st.table(df.head())
 
-# creating a slider
-st.subheader('To view the report: Select the number of producers using the slider below: :point_down:')
-slider_val=st.slider(label='', min_value=1, max_value=25, value=5, key=df['producer'])
+# creating a slider up top version
+#st.subheader('To view the report: Select the number of producers using the slider below: :point_down:')
+#slider_val=st.slider(label='', min_value=1, max_value=25, value=5, key=df['producer'])
 
-st.caption(f'Number of Producers: {slider_val}')
-st.subheader(f'Charts will change according to the slider value: {slider_val}')
-st.write('---')
+#st.caption(f'Number of Producers: {slider_val}')
+#st.subheader(f'Charts will change according to the slider value: {slider_val}')
+#st.write('---')
 
 
 
 # avg of quotes, nb, rw apps side by side
 st.subheader('Weekly Stats:')
 #st.caption(f'Based off slider value: {slider_val}')
-col1, col2, col3 = st.columns(3)
+
+# cols with avg of quotes etc.
+#col1, col2, col3 = st.columns(3)
 
 #with col1:
 #    st.metric(label='AVG Quotes', value=round(df['quotes'].head(slider_val).mean(), 2))
-    
 #with col2:
 #    st.metric(label='AVG NB Apps', value=round(df['nb_apps'].head(slider_val).mean(), 2))
-    
 #with col3:
 #    st.metric(label='AVG RW Apps', value=round(df['rw_apps'].head(slider_val).mean(), 2))
 
+# cols with sum of all quotes, nb, and rw
+col1, col2, col3 = st.columns(3)
 with col1:
-    st.metric(label='All Quotes', value=round(df['updated_quotes'].sum(), 2))
-    
+    st.metric(label='All Quotes', value=round(df['updated_quotes'].sum(), 2))    
 with col2:
-    st.metric(label='All NB Apps', value=round(df['updated_nb_apps'].sum(), 2))
-    
+    st.metric(label='All NB Apps', value=round(df['updated_nb_apps'].sum(), 2)) 
 with col3:
     st.metric(label='All RW Apps', value=round(df['updated_rw_apps'].sum(), 2))
 
@@ -51,23 +51,20 @@ st.write('---')
 
 # this shows the pct change mean based of slider
 col4, col5, col6 = st.columns(3)
-
 with col4:
     st.metric(label='Quotes % Change', value=f"{round(df['pct_change_quotes'].head(slider_val).mean(), 2)}%")
-    
 with col5:
     st.metric(label='NB Apps % Change', value=f"{round(df['pct_change_nb_apps'].head(slider_val).mean(), 2)}%")
-    
 with col6:
     st.metric(label='RW Apps % Change', value=f"{round(df['pct_change_rw_apps'].head(slider_val).mean(), 2)}%")
 
+    
 # code below matches the one on the actual report
+#col4, col5, col6 = st.columns(3)
 #with col4:
 #    st.metric(label='Top 25: Quotes %', value=f"{round(100.0*(df['updated_quotes'].head(25).sum()/df['updated_quotes'].sum()), 2)}%")
-    
 #with col5:
 #    st.metric(label='Top 25: NB Apps %', value=f"{round(100.0*(df['updated_nb_apps'].head(25).sum()/df['updated_nb_apps'].sum()), 2)}%")
-   
 #with col6:
 #    st.metric(label='Top 25: RW Apps %', value=f"{round(100.0*(df['updated_rw_apps'].head(25).sum()/df['updated_rw_apps'].sum()), 2)}%")
 
@@ -89,7 +86,13 @@ st.write('---')
 #with col9:
 #    st.metric(label=f'Total RW Apps: Top {slider_val}', value=f"{df['updated_rw_apps'].head(slider_val).sum()}")
 
+# creating a slider bottom version
+st.subheader('To view the report: Select the number of producers using the slider below: :point_down:')
+slider_val=st.slider(label='', min_value=1, max_value=25, value=5, key=df['producer'])
 
+st.caption(f'Number of Producers: {slider_val}')
+st.subheader(f'Charts will change according to the slider value: {slider_val}')
+st.write('---')
 
 st.subheader('Quotes by Producer:')
 
