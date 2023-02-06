@@ -106,6 +106,8 @@ ax2.bar_label(ax2.containers[0], rotation = 90, label_type='center')
 
 st.pyplot(fig2)
 
+st.write('---')
+
 st.subheader('RW Apps by Producer:')
 
 fig3, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
