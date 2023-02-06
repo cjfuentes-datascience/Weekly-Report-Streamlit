@@ -26,7 +26,7 @@ st.subheader(f'Charts will change according to the slider value: {slider_val}')
 st.write('---')
 
 # avg of quotes, nb, rw apps side by side
-st.subheader('Average Stats: Week Over Week:')
+st.subheader('Average Stats: Week Over Week')
 st.caption(f'Based off slider value: {slider_val}')
 col1, col2, col3 = st.columns(3)
 
@@ -44,13 +44,13 @@ st.write('---')
 col4, col5, col6 = st.columns(3)
 
 with col4:
-    st.metric(label='AVG Quotes % Change WoW', value=f"{round(df['pct_change_quotes'].head(slider_val).mean(), 2)}%")
+    st.metric(label='AVG Quotes % Change', value=f"{round(df['pct_change_quotes'].head(slider_val).mean(), 2)}%")
     
 with col5:
-    st.metric(label='AVG NB Apps % Change WoW', value=f"{round(df['pct_change_nb_apps'].head(slider_val).mean(), 2)}%")
+    st.metric(label='AVG NB Apps % Change', value=f"{round(df['pct_change_nb_apps'].head(slider_val).mean(), 2)}%")
     
 with col6:
-    st.metric(label='AVG RW Apps % Change WoW', value=f"{round(df['pct_change_rw_apps'].head(slider_val).mean(), 2)}%")
+    st.metric(label='AVG RW Apps % Change', value=f"{round(df['pct_change_rw_apps'].head(slider_val).mean(), 2)}%")
 
 st.write('---')
 
