@@ -130,3 +130,5 @@ ax2.bar_label(ax2.containers[0], rotation = 90, label_type='center')
 
 
 st.pyplot(fig3)
+
+st.text("That's all for this week!")
