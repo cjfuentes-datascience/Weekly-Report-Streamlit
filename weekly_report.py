@@ -28,7 +28,6 @@ st.caption('_Data From: Top 25 Producers_')
 #st.write('---')
 
 
-
 # avg of quotes, nb, rw apps side by side
 st.subheader('Weekly Stats:')
 #st.caption(f'Based off slider value: {slider_val}')
@@ -92,6 +91,7 @@ st.write('---')
 #with col9:
 #    st.metric(label=f'Total RW Apps: Top {slider_val}', value=f"{df['updated_rw_apps'].head(slider_val).sum()}")
 
+
 # creating a slider bottom version
 st.subheader('To view the report: Select the number of producers using the slider below: :point_down:')
 slider_val=st.slider(label='', min_value=1, max_value=25, value=5, key=df['producer'])
@@ -102,7 +102,7 @@ st.write('---')
 
 st.subheader('Quotes by Producer:')
 
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4))
 
 sns.barplot(x='producer', y='updated_quotes', data=df.head(slider_val), ax=ax1)
 ax1.set_xticklabels(ax1.get_xticklabels(), rotation=90)
