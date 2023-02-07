@@ -159,7 +159,7 @@ st.pyplot(fig2)
 
 st.write('---')
 
-st.subheader('RW Apps :honey_pot:')
+st.subheader('RW Apps :cherries:')
 
 fig3, (ax1, ax2) = plt.subplots(1, 2, figsize=(width, height))
 sns.barplot(x='producer', y='updated_rw_apps', data=df.head(slider_val), ax=ax1)
