@@ -29,18 +29,18 @@ st.caption('_Data From: Top 25 Producers_')
 
 
 # avg of quotes, nb, rw apps side by side
-st.subheader('Weekly Stats:')
+st.subheader('Weekly Stats: :bookmark_tabs:')
 #st.caption(f'Based off slider value: {slider_val}')
 
 # cols with avg of quotes etc.
 #col1, col2, col3 = st.columns(3)
-
 #with col1:
 #    st.metric(label='AVG Quotes', value=round(df['quotes'].head(slider_val).mean(), 2))
 #with col2:
 #    st.metric(label='AVG NB Apps', value=round(df['nb_apps'].head(slider_val).mean(), 2))
 #with col3:
 #    st.metric(label='AVG RW Apps', value=round(df['rw_apps'].head(slider_val).mean(), 2))
+
 
 # cols with sum of all quotes, nb, and rw
 col1, col2, col3 = st.columns(3)
