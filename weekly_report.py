@@ -102,8 +102,12 @@ st.write('---')
 
 st.subheader('Quotes by Producer:')
 
-width = st.sidebar.slider("Plot Width", 1, 25, 3)
-height = st.sidebar.slider("Plot Height", 1, 25, 1)
+#use this tool to easily check if chart fits by using a slider
+#width = st.sidebar.slider("Plot Width", 1, 25, 3)
+#height = st.sidebar.slider("Plot Height", 1, 25, 1)
+
+width=20
+height=6
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(width, height))
 
@@ -130,7 +134,7 @@ st.write('---')
 
 st.subheader('NB Apps by Producer:')
 
-fig2, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
+fig2, (ax1, ax2) = plt.subplots(1, 2, figsize=(width, height))
 
 sns.barplot(x='producer', y='updated_nb_apps', data=df.head(slider_val), ax=ax1)
 ax1.set_xticklabels(ax1.get_xticklabels(), rotation=90)
@@ -156,7 +160,7 @@ st.write('---')
 
 st.subheader('RW Apps by Producer:')
 
-fig3, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
+fig3, (ax1, ax2) = plt.subplots(1, 2, figsize=(width, height))
 sns.barplot(x='producer', y='updated_rw_apps', data=df.head(slider_val), ax=ax1)
 ax1.set_xticklabels(ax1.get_xticklabels(), rotation=90)
 ax1.set_xlabel('PRODUCERS')
