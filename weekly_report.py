@@ -13,7 +13,7 @@ st.set_page_config(
     layout='wide'
 )
 
-st.title('Weekly Report Dashboard: JAN 29 - FEB 4 2023')
+st.title('Weekly Report Dashboard: JAN 29 - FEB 4 2023 :chart_with_upwards_trend:')
 st.caption('_Data From: Top 25 Producers_')
 #st.subheader('Dated: JAN 22 - JAN 28 2023')
 #st.write('---')
@@ -81,13 +81,10 @@ st.write('---')
 
 #sum of quotes based off slider
 #col7, col8, col9 = st.columns(3)
-
 #with col7:
-#    st.metric(label=f'Total Quotes: Top {slider_val}', value=f"{df['updated_quotes'].head(slider_val).sum()}")
-    
+#    st.metric(label=f'Total Quotes: Top {slider_val}', value=f"{df['updated_quotes'].head(slider_val).sum()}")  
 #with col8:
-#    st.metric(label=f'Total NB Apps: Top {slider_val}', value=f"{df['updated_nb_apps'].head(slider_val).sum()}")
-    
+#    st.metric(label=f'Total NB Apps: Top {slider_val}', value=f"{df['updated_nb_apps'].head(slider_val).sum()}") 
 #with col9:
 #    st.metric(label=f'Total RW Apps: Top {slider_val}', value=f"{df['updated_rw_apps'].head(slider_val).sum()}")
 
