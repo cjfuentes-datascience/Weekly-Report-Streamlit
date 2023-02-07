@@ -10,7 +10,7 @@ df=pd.read_excel(r"new_report_jan29-feb4_2023.xlsx")
 st.set_page_config(
     page_title='Weekly Report Dashboard',
     page_icon=':chart_with_downwards_trend:',
-    layout='centered'
+    layout='wide'
 )
 
 st.title('Weekly Report Dashboard: JAN 29 - FEB 4 2023')
