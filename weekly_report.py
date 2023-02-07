@@ -102,7 +102,7 @@ st.write('---')
 
 st.subheader('Quotes by Producer:')
 
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4))
+fig, (ax1, ax2) = plt.subplots(1, 2)
 
 sns.barplot(x='producer', y='updated_quotes', data=df.head(slider_val), ax=ax1)
 ax1.set_xticklabels(ax1.get_xticklabels(), rotation=90)
