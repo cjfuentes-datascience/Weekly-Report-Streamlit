@@ -9,6 +9,7 @@ df=pd.read_excel(r"new_report_jan29-feb4_2023.xlsx")
 # setting the page index name
 st.set_page_config(
     page_title='Weekly Report Dashboard',
+    icon=':chart:',
     layout='wide'
 )
 
