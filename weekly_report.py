@@ -6,8 +6,13 @@ import seaborn as sns
 
 df=pd.read_excel(r"new_report_jan29-feb4_2023.xlsx")
 
+# setting the page index name
+st.set_page_config(
+    page_title='Weekly Report Dashboard',
+    layout='wide'
+)
 
-st.title('Weekly Report: JAN 29 - FEB 4 2023')
+st.title('Weekly Report Dashboard: JAN 29 - FEB 4 2023')
 st.caption('_Data From: Top 25 Producers_')
 #st.subheader('Dated: JAN 22 - JAN 28 2023')
 #st.write('---')
