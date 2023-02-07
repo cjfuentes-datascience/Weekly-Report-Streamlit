@@ -97,7 +97,7 @@ st.caption(f'Number of Producers: {slider_val}')
 st.subheader(f'Charts will change according to slider value: {slider_val}')
 st.write('---')
 
-st.subheader('Quotes by Producer: {}')
+st.subheader('Quotes by Producer :hotsprings:')
 
 #use this tool to easily check if chart fits by using a slider
 #width = st.sidebar.slider("Plot Width", 1, 25, 3)
@@ -133,7 +133,7 @@ st.pyplot(fig)
 
 st.write('---')
 
-st.subheader('NB Apps by Producer :point_down:')
+st.subheader('NB Apps by Producer :hotsprings:')
 
 fig2, (ax1, ax2) = plt.subplots(1, 2, figsize=(width, height))
 
