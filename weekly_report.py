@@ -102,8 +102,8 @@ st.write('---')
 
 st.subheader('Quotes by Producer:')
 
-width = st.sidebar.slider("plot width", 1, 25, 3)
-height = st.sidebar.slider("plot height", 1, 25, 1)
+width = st.sidebar.slider("Plot Width", 1, 25, 3)
+height = st.sidebar.slider("Plot Height", 1, 25, 1)
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(width, height))
 
