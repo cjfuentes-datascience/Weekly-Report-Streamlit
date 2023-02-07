@@ -111,7 +111,7 @@ width=20
 height=6
 
 #setting grid style
-sns.set_style('darkgrid')
+sns.set_style('dark')
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(width, height))
 
