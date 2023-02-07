@@ -97,7 +97,7 @@ st.caption(f'Number of Producers: {slider_val}')
 st.subheader(f'Charts will change according to slider value: {slider_val}')
 st.write('---')
 
-st.subheader('Quotes :honey_pot:')
+st.subheader('Quotes :rice_ball:')
 
 #use this tool to easily check if chart fits by using a slider
 #width = st.sidebar.slider("Plot Width", 1, 25, 3)
