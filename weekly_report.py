@@ -6,6 +6,8 @@ import seaborn as sns
 
 df=pd.read_excel(r"new_report_jan29-feb4_2023.xlsx")
 
+st.sidebar.header("")
+
 # setting the page index name
 st.set_page_config(
     page_title='Weekly Report Dashboard',
