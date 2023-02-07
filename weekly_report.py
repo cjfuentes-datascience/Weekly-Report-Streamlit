@@ -106,8 +106,11 @@ st.subheader('Quotes by Producer:')
 #width = st.sidebar.slider("Plot Width", 1, 25, 3)
 #height = st.sidebar.slider("Plot Height", 1, 25, 1)
 
+#easily change figsize with these two vars
 width=20
 height=6
+
+sns.set_style('dark_grid')
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(width, height))
 
