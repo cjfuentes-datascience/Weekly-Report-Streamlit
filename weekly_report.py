@@ -120,7 +120,7 @@ ax1.set_title('CURRENT QUOTES')
 ax1.grid(axis='y')
 ax1.bar_label(ax1.containers[0], rotation = 90, label_type='center')
 
-sns.barplot(x='producer', y='quotes.1', data=df.head(slider_val), ax=ax2)
+sns.barplot(x='producer', y='quotes', data=df.head(slider_val), ax=ax2)
 ax2.set_xticklabels(ax2.get_xticklabels(), rotation=90)
 ax2.set_xlabel('PRODUCERS')
 ax2.set_ylabel('# Quotes')
@@ -146,7 +146,7 @@ ax1.grid(axis='y')
 ax1.bar_label(ax1.containers[0], rotation = 90, label_type='center')
 
 
-sns.barplot(x='producer', y='nb_apps.1', data=df.head(slider_val), ax=ax2)
+sns.barplot(x='producer', y='nb_apps', data=df.head(slider_val), ax=ax2)
 ax2.set_xticklabels(ax2.get_xticklabels(), rotation=90)
 ax2.set_xlabel('PRODUCERS')
 ax2.set_ylabel('# NB APPS')
@@ -171,7 +171,7 @@ ax1.grid(axis='y')
 ax1.bar_label(ax1.containers[0], rotation = 90, label_type='center')
 
 
-sns.barplot(x='producer', y='rw_apps.1', data=df.head(slider_val), ax=ax2)
+sns.barplot(x='producer', y='rw_apps', data=df.head(slider_val), ax=ax2)
 ax2.set_xticklabels(ax2.get_xticklabels(), rotation=90)
 ax2.set_xlabel('PRODUCERS')
 ax2.set_ylabel('# RW APPS')
