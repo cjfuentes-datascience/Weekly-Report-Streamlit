@@ -107,7 +107,7 @@ st.subheader('Quotes :rice_ball:')
 #width=20
 #height=6
 
-width = 15
+width = 10
 height = width/3
 
 #setting grid style
