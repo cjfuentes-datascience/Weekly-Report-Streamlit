@@ -104,8 +104,11 @@ st.subheader('Quotes :rice_ball:')
 #height = st.sidebar.slider("Plot Height", 1, 25, 1)
 
 #easily change figsize with these two vars
-width=20
-height=6
+#width=20
+#height=6
+
+width = 20
+height = width/3
 
 #setting grid style
 sns.set_style('white')
